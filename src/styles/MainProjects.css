@@ -8,35 +8,34 @@
 }
 
 #projects {
-  padding-top: 115px;
-  padding-bottom: 115px;
+  padding-top: 8vw; /* 상하 여백도 화면에 비례 */
+  padding-bottom: 8vw;
 }
 /* projects-intro */
 .projects-intro {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 200px 108px;
+  padding: 0 10vw 6vw;
 }
 /* 제목 */
 .projects-intro h1 {
   color: #ff6723;
   font-family: "Orbitron-Bold", sans-serif;
-  font-size: 64px;
-  /* 제목과 문구 사이 간격 */
-  margin-bottom: 27px;
+  font-size: clamp(32px, 4.5vw, 64px);
+  margin-bottom: 1.5vw;
 }
 /* 문구 */
 .projects-intro p {
   color: #fff;
   font-family: "Pretendard-Medium", sans-serif;
-  font-size: 19px;
+  font-size: clamp(14px, 1.3vw, 19px);
 }
 /* 자세히 보기 */
 .projects-btn {
-  width: 139px;
-  height: 45px;
-  font-size: 17px;
+  width: clamp(135px, 10vw, 139px);
+  height: clamp(40px, 3.5vw, 45px);
+  font-size: clamp(16px, 1.1vw, 17px);
   color: White;
   border: 2px solid white;
   border-radius: 100px;
@@ -50,13 +49,25 @@
   text-decoration: none;
   white-space: nowrap;
 }
+.projects-btn-M {
+  display: none;
+}
+.projects-btn-M a {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  text-decoration: none;
+  color: #FFF;
+  font-size: 10px;
+  font-family: "Pretendard-Medium", sans-serif;
+}
 /* 화살표 배경(원) */
 .projects-btn svg {
   background-color: white;
   border-radius: 50%;
   padding: 6px;
-  width: 1.5em;
-  height: 1.5em;
+  width: 20.5%;
+  height: 90%;
   transition: 0.2s ease;
 }
 /* 화살표 선 */
@@ -76,4 +87,47 @@
 /* 화살표 선 */
 .projects-btn:hover path {
   stroke: white;
+}
+@media (max-width: 1023px) {
+  .projects-btn {
+    width: 135px;
+    height: 40px;
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 767px) {
+  .projects-btn {
+    width: 116px;
+    height: 37px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 426px) {
+  .projects-intro h1 {
+    font-size: 20px;
+  }
+  .projects-intro p {
+    font-size: 12px;
+  }
+  .projects-btn-M {
+    display: flex;
+  }
+  .projects-btn {
+    display: none;
+  }
+}
+@media (max-width: 321px) {
+  .projects-intro h1 {
+    font-size: 18px;
+  }
+  .projects-intro p {
+    font-size: 10px;
+  }
+  .projects-btn-M {
+    display: flex;
+  }
+  .projects-btn {
+    display: none;
+  }
 }
