@@ -1,64 +1,56 @@
 @font-face {
   font-family: "Orbitron-ExtraBold";
-  src: url("../../fonts/Orbitron/Orbitron-ExtraBold.ttf") format("truetype");
-
+  src: url("/fonts/Orbitron/Orbitron-ExtraBold.ttf");
+}
+@font-face {
   font-family: "Pretendard-Medium";
-  src: url("../../fonts/Pretendard/Pretendard-Medium.otf") format("truetype");
-
-  font-family: "Orbitron-Medium";
-  src: url("../../fonts/Orbitron/Orbitron-Medium.ttf") format("truetype");
+  src: url("/fonts/Pretendard/Pretendard-Medium.otf");
 }
-
-body {
-  box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
-}
-
 @font-face {
   font-family: "Orbitron-Medium";
-  src: url("../../fonts/Orbitron/Orbitron-Medium.ttf") format("truetype");
+  src: url("/fonts/Orbitron/Orbitron-Medium.ttf");
 }
 
 .members {
   background-color: #000;
-  padding-top: 115px;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
   color: #fff;
   position: relative;
 }
-.banner {
-  height: 400px;
-  width: 100%;
-  /* background-color: #FF8137; */
-}
-.banner_title {
-  font-family: "Orbitron-ExtraBold", sans-serif;
-  font-size: 80px;
-}
-.yearBtn {
-  padding: 1rem 1.6rem;
-  color: #9d9d9d;
-  background-color: #0d0d0d;
-  border-radius: 0.6rem;
-  border: 0.1rem solid #9d9d9d;
-  font-size: 0.8rem;
-  font-family: "Orbitron-ExtraBold";
-  cursor: pointer;
-}
-.yearBtn.selected {
-  color: #ffffff;
-  border-color: #ffffff;
-  background-color: rgba(255, 157, 0, 0.3);
-}
+
 .generation_buttons {
   display: flex;
+  gap: 3vw;
   justify-content: center;
-  gap: 2.1rem;
-  margin-top: 4.6rem;
-  margin-bottom: 6.25rem;
-  background-color: rgba(0, 0, 0, 0.5);
-  flex-wrap: wrap;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+  width: 100%;
+}
+
+.selected,
+.notSelect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 14px;
+  font-family: "Orbitron-SemiBold", sans-serif;
+  font-size: 1.125rem;
+  padding: 1.2vw 2.4vw;
+  min-width: 80px;
   cursor: pointer;
+}
+
+.selected {
+  border: 1px solid white;
+  background-color: rgba(255, 157, 0, 0.32);
+  color: #fff;
+}
+
+.notSelect {
+  border: 1px solid #9d9d9d;
+  color: #9d9d9d;
+  background-color: #0d0d0d;
 }
 
 .members_grid {
@@ -81,7 +73,6 @@ body {
   background-image: url("/MemberPlanet.svg");
   background-repeat: no-repeat;
   background-position: center 2.5rem;
-
   background-size: 50%;
 }
 
@@ -100,6 +91,7 @@ body {
   height: 4.7rem;
   color: #ffffff;
   font-size: 1.6rem;
+  margin-bottom: 7rem;
   font-family: "Pretendard-Medium", sans-serif;
   border: rgb(211, 211, 211, 0.5) 0.1rem solid;
   border-radius: 0.7rem;
@@ -125,113 +117,166 @@ body {
   display: flex;
   justify-content: center;
   gap: 1.1rem;
-  margin-bottom: 5.25rem;
+  margin-bottom: 7rem;
 }
 
 .member_explanation {
   font-size: 1.1rem;
   font-family: "Orbitron-Medium", sans-serif;
-  margin-top: 1.6;
+  margin-top: 2rem;
 }
 
 .member_sixYear_title {
-  margin-bottom: 4.5rem;
+  margin-bottom: 6rem;
+}
+
+@media (max-width:1800px) {
+  .members {
+    padding-top: 6rem;
+  }
+  .selected,
+  .notSelect {
+    font-size: 1rem;
+  }
+  .members_grid {
+    gap: 2.5rem;
+    row-gap: 2.7rem;
+  }
+  .member_sixYear {
+    padding-top: 11rem;
+    background-position: center 2rem;
+  }
+  .member_title {
+    font-size: 3rem;
+  }
+  .member_join {
+    width: 26rem;
+    height: 4rem;
+    font-size: 1.6rem;
+    margin-bottom: 6rem;
+    border-radius: 0.6rem;
+  }
+  .member_button {
+    gap: 1rem;
+    margin-bottom: 5.25rem;
+  }
+  .member_explanation {
+    font-size: 1rem;
+    margin-top: 1.6rem;
+  }
+  .member_sixYear_title {
+    margin-bottom: 5rem;
+  }
 }
 
 @media (max-width: 1024px) {
   .members {
-    padding: 7rem 0rem;
+    padding-top: 5rem;
   }
-  .yearBtn {
-    padding: 0rem 1.3rem;
-    border-radius: 0.5rem;
-    border: 0.1rem solid #9d9d9d;
+  .selected,
+  .notSelect {
     font-size: 0.8rem;
   }
-  .generation_buttons {
-    gap: 1.8rem;
-    margin-top: 4rem;
-    margin-bottom: 5.5rem;
-  }
   .members_grid {
-    gap: 1.8rem;
-    row-gap: 1.8rem;
+    gap: 2.3rem;
+    row-gap: 2.4rem;
   }
-
   .member_sixYear {
-    padding-top: 5rem;
-    background-image: url("/MemberPlanet.svg");
-    background-repeat: no-repeat;
-    background-position: center 0rem;
-    background-size: 50%;
+    padding-top: 7rem;
+    background-position: center 2rem;
   }
-  .member_title {
-    font-size: 2.7rem;
-    margin-bottom: 1.5rem;
+  .member_join {
+    width: 22rem;
+    height: 3.5rem;
+    font-size: 1.4rem;
+    margin-bottom: 5rem;
+    border-radius: 0.5rem;
+  }
+  .member_button {
+    gap: 1rem;
+    margin-bottom: 5.25rem;
   }
   .member_explanation {
     font-size: 0.9rem;
   }
-  .member_button {
-    gap: 0.8rem;
-    margin-bottom: 5rem;
-  }
   .member_sixYear_title {
-    margin-bottom: 3rem;
-  }
-  .member_join {
-    width: 26rem;
-    height: 4.4rem;
-    font-size: 1.6rem;
-    border: rgb(211, 211, 211, 0.5) 0.1rem solid;
-    border-radius: 0.6rem;
+    margin-bottom: 4rem;
   }
 }
 
 @media (max-width: 768px) {
   .members {
-    padding: 3rem 0rem;
+    padding-top: 4rem;
   }
-  .yearBtn {
-    padding: 0rem 1.5rem;
-    border-radius: 0.5rem;
-    border: 0.1rem solid #9d9d9d;
-    font-size: 0.8rem;
-  }
-  .generation_buttons {
-    gap: 1rem;
-    margin-top: 0rem;
-    margin-bottom: 3rem;
+  .selected,
+  .notSelect {
+    font-size: 0.4rem;
   }
   .members_grid {
-    gap: 1rem;
-    row-gap: 1rem;
+    gap: 2rem;
+    row-gap: 2rem;
   }
-
   .member_sixYear {
-    padding-top: 3.5rem;
-    background-position: center 0rem;
-    background-size: 50%;
-  }
-  .member_title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  .member_explanation {
-    font-size: 0.7rem;
-  }
-  .member_button {
-    gap: 0.6rem;
-    margin-bottom: 3.5rem;
-  }
-  .member_sixYear_title {
-    margin-bottom: 2rem;
+    padding-top: 7rem;
+    background-position: center 2rem;
   }
   .member_join {
-    width: 15rem;
-    height: 3rem;
-    font-size: 1rem;
-    border: rgb(211, 211, 211, 0.5) 0.1rem solid;
+    width: 17rem;
+    height: 2.8rem;
+    font-size: 1.1rem;
+    margin-bottom: 4rem;
     border-radius: 0.4rem;
+  }
+  .member_button {
+    gap: 0.8rem;
+    margin-bottom: 3rem;
+  }
+  .member_title{
+    font-size: 2.5rem;
+  }
+  .member_explanation{
+    font-size: 0.8rem;
+    margin-top: 1.3rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .members {
+    padding-top: 3rem;
+  }
+  .generation_buttons{
+    gap: 4rem;
+  }
+  .selected,
+  .notSelect {
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    padding: 0.5rem 0.62rem;
+  }
+  .members_grid {
+    gap: 2rem;
+    row-gap: 2rem;
+  }
+  .member_sixYear {
+    padding-top: 7rem;
+    background-position: center 2rem;
+  }
+  .member_join {
+    width: 17rem;
+    height: 2.8rem;
+    font-size: 1.1rem;
+    margin-bottom: 4rem;
+    border-radius: 0.4rem;
+  }
+  .member_button {
+    gap: 0.8rem;
+    margin-bottom: 3rem;
+  }
+  .member_title{
+    font-size: 2.5rem;
+  }
+  .member_explanation{
+    font-size: 0.8rem;
+    margin-top: 1.3rem;
   }
 }

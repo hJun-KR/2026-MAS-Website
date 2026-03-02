@@ -22,22 +22,17 @@ function Members() {
       <div className="members">
         <div>
           <Banner
-            bannerIMG="/member_banner.svg"
+            pcImg="/membersBanner.svg"
+            mobileImg="/members_bg.svg"
             h1Title="MEMBERS"
-            pExplanation1="MAS를 빛내고 지금까지 "
-            pExplanation2="이끌어 온 부원들 입니다."
+            pExplanation1="MAS를 빛내고 지금까지"
+            pExplanation2="M이끌어 온 부원들 입니다."
           />
         </div>
 
         <div className="generation_buttons">
-          {[4, 5, 6].map((g) => (
-            <button
-              key={g}
-              className={`yearBtn ${gen === g ? "selected" : ""}`}
-              onClick={() => setGen(g)}
-            >
-              {g}기
-            </button>
+          {[4, 5, 6].map(g => (
+            <button key={g} className={`yearBtn ${gen === g ? "selected" : "notSelect"}`} onClick={() => setGen(g)} >{g}기</button>
           ))}
         </div>
 

@@ -2,20 +2,26 @@
   font-family: "Orbitron-Bold";
   src: url("/fonts/Orbitron/Orbitron-Bold.ttf");
 }
-
+@font-face {
+  font-family: "Orbitron-SemiBold";
+  src: url("/fonts/Orbitron/Orbitron-SemiBold.ttf");
+}
 @font-face {
   font-family: "Pretendard-Medium";
   src: url("/fonts/Pretendard/Pretendard-Medium.otf");
+}
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("/fonts/Pretendard/Pretendard-Regular.otf");
 }
 
 .coreValueCard {
   background-color: black;
   border: 1px solid rgba(94, 94, 94, 0.7);
-  border-radius: 1.3rem;
+  border-radius: 1.25rem;
   width: 100%;
   height: auto;
-  min-height: 235px;
-  padding: 1.5rem;
+  padding: 1.88rem;
   white-space: pre-wrap;
 }
 
@@ -25,15 +31,14 @@
 }
 
 .coreValueCard > .background {
-  width: 4.4rem;
-  height: 4.4rem;
+  width: 5.4rem;
+  height: 5.4rem;
   background-color: #181818;
-  border-radius: 14px;
-  margin-bottom: 2.7rem;
+  border-radius: 0.875rem;
+  margin-bottom: 3.38rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0;
 }
 
 .coreValueCard:hover > .background {
@@ -46,59 +51,97 @@
 }
 
 .coreValueCard > .background > img {
-  width: 2.8rem;
+  width: 3.37rem;
 }
 
 .coreValueCard > h2 {
-  font-family: "Orbitron-Bold";
-  font-size: 1.2rem;
-  margin-bottom: 0.7rem;
+  font-family: "Orbitron-Bold", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.87rem;
 }
 
 .coreValueCard > p {
-  font-family: "Pretendard-Medium";
-  font-size: 0.85rem;
+  font-family: "Pretendard-Medium", sans-serif;
+  font-size: 1rem;
+}
+
+@media (max-width: 1800px) {
+  .coreValueCard {
+    border-radius: 1rem;
+    padding: 1.6rem;
+  }
+  .coreValueCard > .background {
+    width: 4.9rem;
+    height: 4.9rem;
+    border-radius: 0.8rem;
+    margin-bottom: 2.8rem;
+  }
+  .coreValueCard > .background > img {
+    width: 3rem;
+  }
+  .coreValueCard > h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.7rem;
+  }
+  .coreValueCard > p {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 1024px) {
   .coreValueCard {
+    border-radius: 0.7rem;
     padding: 1.2rem;
-    min-height: 200px;
   }
   .coreValueCard > .background {
-    width: 3.8rem;
-    height: 3.8rem;
-    margin-bottom: 2rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.2rem;
   }
   .coreValueCard > .background > img {
-    width: 2.4rem;
+    width: 2.5rem;
   }
   .coreValueCard > h2 {
+    font-family: "Orbitron-SemiBold", sans-serif;
     font-size: 1rem;
+    margin-bottom: 0.4rem;
+  }
+  .coreValueCard > p {
+    font-family: "Pretendard-Regular";
+    font-size: 0.8rem;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 768px) {
+  .coreValueCard > h2 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
   }
   .coreValueCard > p {
     font-size: 0.8rem;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 430px) {
   .coreValueCard {
+    border-radius: 0.9rem;
     padding: 1rem;
-    min-height: auto;
-    white-space: normal;
   }
   .coreValueCard > .background {
-    width: 3.2rem;
-    height: 3.2rem;
-    margin-bottom: 1.5rem;
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 0.25rem;
+    margin-bottom: 0.63rem;
   }
   .coreValueCard > .background > img {
-    width: 2rem;
+    width: 1.5rem;
   }
   .coreValueCard > h2 {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
   .coreValueCard > p {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
   }
 }

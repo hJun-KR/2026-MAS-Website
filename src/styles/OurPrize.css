@@ -9,67 +9,66 @@
 
 @font-face {
   font-family: "Orbitron-ExtraBold";
-  src: url("src/fonts/Orbitron/Orbitron-ExtraBold.ttf");
+  src: url("/fonts/Orbitron/Orbitron-ExtraBold.ttf");
 }
-/* 마스 전체 css------------------ */
+@font-face {
+  font-family: "Pretendard-Medium";
+  src: url("/fonts/Pretendard/Pretendard-Medium.otf");
+}
 #ourPrize {
-  padding-top: 1.8rem;
-  padding-bottom: 7.1rem;
+  padding-top: 7.3rem;
+  padding-bottom: 7.3rem;
   display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
   position: relative;
+  border: 1px solid yellow;
+  overflow: hidden;
 }
-/* 마스 배경 행성 사진 css------------------ */
 .ourprize_background {
   position: absolute;
-  top: 5.8rem;
-  height: 36.4rem;
+  top: 7.31rem;
+  height: 45.5625rem;
   width: auto;
   z-index: -1;
 }
-/* 마스 제목+설명+버튼 css------------------ */
 .ourPrize-left {
-  margin-top: 18.7rem;
-  margin-left: 10.5rem;
+  margin-top: 20rem;
   background: rgba(55, 55, 55, 0);
   z-index: 2;
 }
-/* 마스 OUR PRIZE css------------------ */
-.ourPrize-left .our {
+.ourPrize-left > h1 {
   color: #cbcbcb;
   font-family: "Orbitron-ExtraBold", sans-serif;
-  font-size: 64px;
-
+  font-size: 5rem;
   background-color: transparent;
 }
 .ourPrize-left > .prize {
   padding: 0;
   color: #ff6723;
-  font-family: "Orbitron-ExtraBold", sans-serif;
-  font-size: 4rem;
-
-  background-color: transparent;
 }
-/* 마스 설명 css------------------ */
 .ourPrize-left .explanation {
-  margin-top: 1.1rem;
+  margin-top: 1.5rem;
   background-color: transparent;
-  width: 21.2rem;
+  white-space: pre-line;
   color: #fff;
+  line-height: 2rem;
 }
-/* 마스 상 더보기 버튼 css------------------ */
 .ourPrize-left .morePrize {
   display: flex;
   align-items: center;
-  margin-top: 8.7rem;
-  padding: 0.6rem 0.3rem 0.6rem 0.625rem;
+  margin-top: 8.06rem;
+  padding: 0.5rem 0.5rem 0.5rem 1.2rem;
   background-color: black;
-  border: 0.1rem solid white;
-  border-radius: 1.25rem;
-  color: #ffffff;
-  width: 13.5rem;
-  height: 2.6rem;
-  font-size: 1.1rem;
+  border: 2px solid #fff;
+  border-radius: 62.5rem;
+  color: #fff;
+  width: 16.625rem;
+  height: 3.375rem;
+  font-size: 1.375rem;
   cursor: pointer;
+  font-family: "Pretendard-Medium";
 }
 .ourPrize-left .morePrize:hover {
   color: #ff6723;
@@ -81,32 +80,34 @@
     color: white;
   }
 }
-
 .nextButton {
   background-color: white;
   padding: 0.2rem;
   margin-left: 0.6rem;
   border-radius: 1.25rem;
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 2rem;
+  height: 2rem;
   transition: 0.2s ease;
 }
-/* 마스 단체 사진 css------------------ */
 .ourpPicture {
-  margin-left: 8.1rem;
-  margin-top: 12.5rem;
+  margin-right: 9.5rem;
+  margin-top: 7.38rem;
 }
-
 .ourprizePicture {
-  width: 48.5rem;
-  height: auto;
+  width: 60.75rem;
 }
-/* 마스 위성 css------------------ */
+.full {
+  display: flex;
+  align-items: center;
+}
+.short {
+  display: none;
+}
 .miniTitan1 {
   position: absolute;
   animation: spin 20s linear infinite;
-  transform-origin: 0 18.7rem;
-  width: 1.1rem;
+  transform-origin: 0 23.2rem;
+  width: 1rem;
   height: auto;
   animation-delay: -16s;
   z-index: 3;
@@ -114,184 +115,207 @@
 .miniTitan2 {
   position: absolute;
   animation: spin 20s linear infinite;
-  transform-origin: 0 18.6rem;
-  width: 0.9rem;
+  transform-origin: 0 23.2rem;
+  width: 1rem;
   height: auto;
   animation-delay: -7s;
   z-index: 3;
 }
 .miniTitan3 {
   position: absolute;
-  animation: spin 15s linear infinite;
-  transform-origin: 0 14.7rem;
-  width: 0.9rem;
+  animation: spin 20s linear infinite;
+  transform-origin: 0 18.35rem;
+  width: 1rem;
   height: auto;
   animation-delay: -8s;
   z-index: 3;
 }
-/* 행성 중심 설정 */
 .planet_center1 {
   position: absolute;
-  top: 5.3rem;
-  left: 12.563rem;
+  top: 6.9rem;
+  left: 15.8rem;
+  z-index: 3;
+}
+.planet_center2 {
+  position: absolute;
+  top: 11.66rem;
+  left: 15.8rem;
   z-index: 3;
 }
 
-.planet_center2 {
-  position: absolute;
-  top: 9.3rem;
-  left: 12.563rem;
-  z-index: 3;
-}
-@media (max-width: 1024px) {
-  #ourPrize {
-    padding-top: 1rem;
-    padding-bottom: 7rem;
-  }
+@media (max-width: 1800px) {
   .ourprize_background {
-    top: 4rem;
-    height: 25rem;
+    height: 38rem;
   }
   .ourPrize-left {
-    margin-top: 13rem;
-    margin-left: 8rem;
+    margin-top: 16rem;
+    margin-left: 5rem;
   }
-  .ourPrize-left .our {
-    font-size: 2.5rem;
-  }
-  .ourPrize-left .prize {
-    font-size: 2.5rem;
+  .ourPrize-left > h1 {
+    font-size: 4rem;
   }
   .ourPrize-left .explanation {
-    margin-top: 0.7rem;
-    width: 20rem;
-    font-size: 0.7rem;
+    margin-top: 1rem;
+    line-height: 1.5rem;
   }
   .ourPrize-left .morePrize {
-    margin-top: 6.5rem;
-    padding: 0.5rem 0.2rem 0.5rem 0.5rem;
-    border: 0.09rem solid white;
-    border-radius: 1.25rem;
-    width: 11.3rem;
-    height: 2.3rem;
-    font-size: 0.9rem;
+    margin-top: 9.06rem;
+    padding: 0.3rem 0.3rem 0.3rem 1.1rem;
+    width: 14.5rem;
+    height: 3rem;
+    font-size: 1.2rem;
   }
   .nextButton {
-    padding: 0.2rem;
+    padding: 0.1rem;
     margin-left: 0.6rem;
-    border-radius: 1.25rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .ourpPicture {
+    margin-right: 6rem;
+  }
+  .ourprizePicture {
+    width: 50vw;
+  }
+  .miniTitan1 {
+    transform-origin: 0 19.45rem;
+    width: 0.9rem;
+  }
+  .miniTitan2 {
+    transform-origin: 0 19.45rem;
+    width: 0.9rem;
+  }
+  .miniTitan3 {
+    transform-origin: 0 15.3rem;
+    width: 1rem;
+  }
+  .planet_center1 {
+    top: 6.8rem;
+    left: 13.1rem;
+  }
+  .planet_center2 {
+    top: 11rem;
+    left: 13.2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  #ourPrize {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  .ourprize_background {
+    height: 28rem;
+  }
+  .ourPrize-left {
+    margin-top: 14rem;
+    margin-left: 4rem;
+  }
+  .ourPrize-left > h1 {
+    font-size: 3rem;
+  }
+  .ourPrize-left .explanation {
+    font-size: 0.85rem;
+    line-height: 1.3rem;
+  }
+  .ourPrize-left .morePrize {
+    display: flex;
+    align-items: center;
+    margin-top: 6rem;
+    padding: 0.2rem 0.2rem 0.2rem 1rem;
+    width: 12.5rem;
+    height: 2.6rem;
+    font-size: 1rem;
+  }
+  .nextButton {
+    padding: 0.07rem;
+    margin-left: 0.6rem;
     width: 1.3rem;
     height: 1.3rem;
   }
   .ourpPicture {
-    margin-left: 0rem;
-    margin-top: 9rem;
+    margin-right: 1.25rem;
   }
-
-  .ourprizePicture {
-    width: 27rem;
-  }
-
   .miniTitan1 {
-    animation: spin 20s linear infinite;
-    transform-origin: 0 12.8rem;
-    animation-delay: -16s;
-    width: 0.7rem;
+    transform-origin: 0 14.35rem;
+    width: 0.8rem;
   }
   .miniTitan2 {
-    animation: spin 20s linear infinite;
-    transform-origin: 0 12.8rem;
-    animation-delay: -7s;
-    width: 0.7rem;
+    transform-origin: 0 14.35rem;
+    width: 0.8rem;
   }
   .miniTitan3 {
-    animation: spin 15s linear infinite;
-    transform-origin: 0 10rem;
-    width: 0.7rem;
+    transform-origin: 0 11.3rem;
+    width: 0.8rem;
   }
   .planet_center1 {
-    top: 3.7rem;
-    left: 8.6rem;
+    top: 6.9rem;
+    left: 9.7rem;
   }
-
   .planet_center2 {
-    top: 6.3rem;
-    left: 8.6rem;
+    top: 9.935rem;
+    left: 9.65rem;
   }
 }
+
 @media (max-width: 768px) {
+}
+
+@media (max-width: 430px) {
   #ourPrize {
-    padding-top: 0.8rem;
-    padding-bottom: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
   .ourprize_background {
-    top: 3rem;
-    height: 22rem;
+    height: 15.25rem;
   }
   .ourPrize-left {
-    margin-top: 11.5rem;
-    margin-left: 7rem;
+    margin-top: 8.5rem;
+    margin-left: 2rem;
   }
-  .ourPrize-left .our {
-    font-size: 2.2rem;
-  }
-  .ourPrize-left .prize {
-    font-size: 2.2rem;
+  .ourPrize-left > h1 {
+    font-size: 1.3rem;
   }
   .ourPrize-left .explanation {
-    margin-top: 0.3rem;
-    width: 12rem;
-    font-size: 0.5rem;
+    margin-top: 0.5rem;
+    line-height: 1rem;
+    font-size: 0.75rem;
   }
   .ourPrize-left .morePrize {
-    margin-top: 5.5rem;
-    padding: 0.4rem 0.1rem 0.4rem 0.4rem;
-    border: 0.09rem solid white;
-    border-radius: 1.25rem;
-    width: 8rem;
-    height: 1.5rem;
-    font-size: 0.6rem;
+    border: none;
+    background: none;
+    margin-top: 1rem;
+    font-size: 0.9rem;
   }
-  .nextButton {
-    padding: 0.2rem;
-    margin-left: 0.6rem;
-    border-radius: 1.25rem;
-    width: 1rem;
-    height: 1rem;
+  .full {
+    display: none;
   }
-  .ourpPicture {
-    margin-left: 4rem;
-    margin-top: 7rem;
+  .short {
+    display: flex;
+    justify-content: center;
+    top: -30rem;
   }
-
-  .ourprizePicture {
-    width: 22rem;
+  .short img {
+    margin-left: 1rem;
   }
-
   .miniTitan1 {
-    animation: spin 20s linear infinite;
-    transform-origin: 0 11.2rem;
-    animation-delay: -16s;
-    width: 0.5rem;
+    transform-origin: 0 14.35rem;
+    width: 0.8rem;
   }
   .miniTitan2 {
-    animation: spin 20s linear infinite;
-    transform-origin: 0 11.2rem;
-    animation-delay: -7s;
-    width: 0.5rem;
+    transform-origin: 0 14.35rem;
+    width: 0.8rem;
   }
   .miniTitan3 {
-    animation: spin 15s linear infinite;
-    transform-origin: 0 8.8rem;
-    width: 0.5rem;
+    transform-origin: 0 11.3rem;
+    width: 0.8rem;
   }
   .planet_center1 {
-    top: 2.7rem;
-    left: 7.7rem;
+    top: 6.9rem;
+    left: 9.7rem;
   }
-
   .planet_center2 {
-    top: 5rem;
-    left: 7.7rem;
+    top: 9.935rem;
+    left: 9.65rem;
   }
 }

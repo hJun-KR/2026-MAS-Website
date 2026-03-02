@@ -11,7 +11,7 @@
 
 /* 전체 컨테이너 */
 .project {
-  padding-top: 115px;
+  padding-top: 7rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -34,7 +34,7 @@
   align-items: center;
   border-radius: 14px;
   font-family: "Orbitron-SemiBold", sans-serif;
-  font-size: 18px;
+  font-size: 1.125rem;
   padding: 1.2vw 2vw;
   min-width: 80px;
   cursor: pointer;
@@ -55,18 +55,34 @@
 
 .allProjects {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 440px));
+  grid-template-columns: repeat(2, auto);
   justify-content: center;
-  gap: 20px;
-  margin-top: 68px;
-  margin-bottom: 68px;
+  gap: 2rem;
+  margin-top: 4.44rem;
+  margin-bottom: 4.38rem;
   width: 90%;
   max-width: 900px; /* (440px * 2) + gap(20px) */
 }
 
 /* --- 반응형 미디어 쿼리 --- */
+@media (max-width: 1800px) {
+  .project {
+    padding-top: 6rem;
+  }
+  .selected,
+  .notSelect {
+    font-size: 1rem;
+  }
+  .allProjects {
+    width: 90%;
+    max-width: 900px; /* (440px * 2) + gap(20px) */
+  }
+}
 
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
+  .project {
+    padding-top: 5rem;
+  }
   .allProjects {
     gap: 15px;
     width: 95%;
@@ -82,10 +98,32 @@
   .project {
     padding-top: 80px;
   }
-
   .allProjects {
-    grid-template-columns: minmax(0, 440px);
-    gap: 30px;
+    gap: 1.2rem;
     margin-top: 40px;
+  }
+}
+
+@media (max-width: 430px) {
+  .project {
+    padding-top: 3rem;
+  }
+  .list {
+    gap: 3.38rem;
+  }
+  .selected,
+  .notSelect {
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    padding: 0.5rem 0.62rem;
+    min-width: 0;
+    cursor: pointer;
+  }
+  .allProjects {
+    gap: 0.5rem;
+    margin-top: 2.25rem;
+    margin-bottom: 6.56rem;
+    width: 90%;
+    max-width: 900px; /* (440px * 2) + gap(20px) */
   }
 }

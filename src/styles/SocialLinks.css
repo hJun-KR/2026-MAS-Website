@@ -2,29 +2,20 @@
   align-items: center;
   list-style: none;
   display: flex;
-  gap: 1.6rem;
+  gap: 1.88rem;
 }
 
 .nav_links > li > a > img {
-  height: 1.5rem;
+  height: 1.75rem;
   cursor: pointer;
   display: block;
 }
 
 @media (max-width: 1024px) {
   .nav_links {
-    gap: 1rem;
+    gap: 1.2rem;
   }
   .nav_links > li > a > img {
-    height: 1.2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .nav_links {
-    gap: 0.6rem;
-  }
-  .nav_links > li > a > img {
-    height: 1rem;
+    height: 1.3rem;
   }
 }

@@ -8,43 +8,42 @@
 }
 
 #projects {
-  padding-top: 8vw; /* 상하 여백도 화면에 비례 */
-  padding-bottom: 8vw;
+  padding-top: 8rem;
+  padding-bottom: 7rem;
 }
-/* projects-intro */
 .projects-intro {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10vw 6vw;
+  padding: 0 13.75rem 7.31rem;
 }
 /* 제목 */
 .projects-intro h1 {
   color: #ff6723;
   font-family: "Orbitron-Bold", sans-serif;
-  font-size: clamp(32px, 4.5vw, 64px);
+  font-size: 5rem;
   margin-bottom: 1.5vw;
 }
 /* 문구 */
 .projects-intro p {
   color: #fff;
   font-family: "Pretendard-Medium", sans-serif;
-  font-size: clamp(14px, 1.3vw, 19px);
+  font-size: 1.5rem;
 }
 /* 자세히 보기 */
 .projects-btn {
-  width: clamp(135px, 10vw, 139px);
-  height: clamp(40px, 3.5vw, 45px);
-  font-size: clamp(16px, 1.1vw, 17px);
+  width: 10.875rem;
+  height: 3.3125rem;
+  font-size: 1.375rem;
   color: White;
   border: 2px solid white;
   border-radius: 100px;
-  padding: 4px 0px 4px 7px;
+  padding: 0.35rem 0px 0.35rem 0rem;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Pretendard-Medium", sans-serif;
-  gap: 10px;
+  gap: 0.88rem;
   transition: 0.2s ease;
   text-decoration: none;
   white-space: nowrap;
@@ -57,8 +56,8 @@
   gap: 14px;
   align-items: center;
   text-decoration: none;
-  color: #FFF;
-  font-size: 10px;
+  color: #fff;
+  font-size: 0.8rem;
   font-family: "Pretendard-Medium", sans-serif;
 }
 /* 화살표 배경(원) */
@@ -88,6 +87,38 @@
 .projects-btn:hover path {
   stroke: white;
 }
+
+@media (max-width: 1800px) {
+  #projects {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  .projects-intro {
+    padding: 0 10vw 6vw;
+  }
+  .projects-intro h1 {
+    font-size: clamp(32px, 4.5vw, 64px);
+    margin-bottom: 1.5vw;
+  }
+  .projects-intro p {
+    font-size: clamp(14px, 1.3vw, 19px);
+  }
+  .projects-btn {
+    width: clamp(135px, 10vw, 139px);
+    height: clamp(40px, 3.5vw, 45px);
+    font-size: clamp(16px, 1.1vw, 17px);
+    border-radius: 100px;
+    padding: 4px 0px 4px 7px;
+    gap: 10px;
+  }
+  .projects-btn-M a {
+    gap: 14px;
+  }
+  .projects-btn svg {
+    padding: 6px;
+  }
+}
+
 @media (max-width: 1023px) {
   .projects-btn {
     width: 135px;
@@ -103,12 +134,20 @@
     font-size: 14px;
   }
 }
+
 @media (max-width: 426px) {
+  #project {
+    padding-bottom: 0;
+  }
+  .projects-intro {
+    padding: 1.5rem 1.5rem 0.94rem;
+  }
   .projects-intro h1 {
-    font-size: 20px;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
   }
   .projects-intro p {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
   .projects-btn-M {
     display: flex;

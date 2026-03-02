@@ -13,7 +13,7 @@
   flex-direction: column;
   color: #fff;
   align-items: center;
-  padding: 6rem 10% 6rem;
+  padding: 8rem 0;
 }
 
 .qa_intro {
@@ -24,34 +24,35 @@
 
 .qa_intro h1 {
   font-family: "Orbitron-Bold", sans-serif;
-  font-size: 4rem;
+  font-size: 5rem;
   color: #ff6723;
 }
 
 .qa_intro p {
   font-family: "Pretendard-Medium", sans-serif;
-  font-size: 1.2rem;
-  margin-bottom: 5rem;
+  font-size: 1.5rem;
+  margin-bottom: 7.75rem;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1800px) {
   #qna {
-    padding: 5rem 8% 5rem;
+    padding: 7rem 0;
   }
   .qa_intro h1 {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
   }
   .qa_intro p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+    margin-bottom: 7rem;
   }
 }
 
 @media (max-width: 1024px) {
   #qna {
-    padding: 4rem 7% 4rem;
+    padding: 6rem 0;
   }
   .qa_intro h1 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
   .qa_intro p {
     font-size: 1rem;
@@ -61,13 +62,30 @@
 
 @media (max-width: 768px) {
   #qna {
-    padding: 3rem 5% 3rem;
+    padding: 4rem 0;
   }
   .qa_intro h1 {
-    font-size: 2.2rem;
+    font-size: 3.5rem;
   }
   .qa_intro p {
     font-size: 0.9rem;
     margin-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 430px) {
+  #qna {
+    padding: 2rem 0;
+  }
+  .qa_intro h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .qa_intro p {
+    font-size: 0.75rem;
+    margin-bottom: 2.12rem;
+  }
+  .qna-contents {
+    padding: 0 10px;
   }
 }

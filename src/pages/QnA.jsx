@@ -9,9 +9,15 @@ function QnA() {
         <h1>Q&A</h1>
         <p>함께 가치를 만들어갈 여러분들을 기다립니다.</p>
       </div>
-      {qnaList.map((item) => (
-        <QnAElements key={item.id} title={item.title} content={item.content} />
-      ))}
+      <div className="qna-contents">
+        {qnaList.map((item) => (
+          <QnAElements
+            key={item.id}
+            title={item.title}
+            content={item.content}
+          />
+        ))}
+      </div>
     </section>
   );
 }

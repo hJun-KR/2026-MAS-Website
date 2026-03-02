@@ -1,69 +1,94 @@
-/* 필수 전역 설정 */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@font-face {
+  font-family: "Orbitron-ExtraBold";
+  src: url("../fonts/Orbitron/Orbitron-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "Pretendard-Medium";
+  src: url("../fonts/Pretendard/Pretendard-Medium.otf");
 }
 
-/* 배너 영역 */
-.bannerAll {
-  position: relative;
+.bannerAll{
   width: 100%;
-  height: 22rem;
-  overflow: hidden;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  height: 100%;
+  position: relative;
 }
-/* 배경화면 */
-.bannerBg {
+
+.bannerBg-pc{
+  width: 100%;
+  height: 100%;
+}
+
+.bannerBg-mobile{
+  display: none;
+}
+
+.banner-texts{
   position: absolute;
-  width: 100%;
-  z-index: 0;
-}
-/* 제목 */
-.bannerTitle {
-  position: relative;
-  font-size: 4rem;
-  font-family: "Orbitron-ExtraBold", sans-serif;
-  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 7rem 44rem;
+  white-space: pre;
 }
 
-/* 설명 */
-.bannerExplanation {
-  position: relative;
-  margin-top: 1rem;
-  font-size: 1.1rem;
-  font-family: "Pretendard-Medium", sans-serif;
+.bannerTitle{
+  font-family: "Orbitron-ExtraBold";
+  font-size: 5rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.bannerExplanation{
+  font-family: "Pretendard-Medium";
+  font-size: 1.357rem;
   color: #c3c3c3;
-
-  z-index: 1;
 }
+
+@media (max-width: 1800px) {
+  .bannerTitle{
+    font-size: 4rem;
+    margin-bottom: 1.2rem;
+  }
+  .bannerExplanation{
+    font-size: 1.2rem;
+  }
+}
+
 @media (max-width: 1024px) {
-  .bannerAll {
-    height: 13rem;
+  .bannerTitle{
+    font-size: 3rem;
+    margin-bottom: 0.8rem;
   }
-  .bannerTitle {
-    font-size: 2.5rem;
-  }
-  .bannerExplanation {
-    font-size: 0.7rem;
-    margin-top: 0.7rem;
+  .bannerExplanation{
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 768px) {
-  .bannerAll {
-    height: 17.5rem;
+  .bannerTitle{
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
   }
-  .bannerTitle {
-    font-size: 1.9rem;
+  .bannerExplanation{
+    font-size: 0.9rem;
   }
-  .bannerExplanation {
-    font-size: 0.5rem;
-    margin-top: 0.4rem;
+}
+
+@media (max-width: 430px) {
+  .bannerBg-pc{
+    display: none;
+  }
+  .bannerBg-mobile{
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  .bannerTitle{
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  .bannerExplanation{
+    font-size: 0.75rem;
   }
 }

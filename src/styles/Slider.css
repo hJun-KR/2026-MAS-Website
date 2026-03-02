@@ -12,15 +12,16 @@
 
 .members-slide {
   /* 원래 너비 304px 기준 화면 비율 20%로 설정 */
-  width: clamp(180px, 20vw, 304px); 
+  width: clamp(180px, 20vw, 304px);
   /* 세로 비율 유지 (304:384) */
-  aspect-ratio: 304 / 384; 
+  aspect-ratio: 304 / 384;
   margin-right: 2vw;
   border-radius: 15px;
   object-fit: cover;
 }
 
-.projects-slideUp, .projects-slideDown {
+.projects-slideUp,
+.projects-slideDown {
   width: clamp(220px, 27vw, 387px);
   aspect-ratio: 387 / 219;
   margin-right: 2vw;
@@ -37,16 +38,28 @@
   border-radius: 10px;
   object-fit: cover;
 }
+
 @keyframes scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 @media (max-width: 426px) {
   .projects-mobile {
     display: inline;
   }
-  .projects-slideUp, .projects-slideDown {
+  .projects-slideUp,
+  .projects-slideDown {
     display: none;
+  }
+  .members-slide {
+    width: 8.0625rem;
+    height: 10.1875rem;
+    aspect-ratio: 110/139;
+    border-radius: 10px;
   }
 }
