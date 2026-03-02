@@ -4,11 +4,15 @@ import Banner from '../components/Banner.jsx';
 import ProjectsBox from '../components/ProjectsBox';
 import '../styles/Projects.css'
 import projectsList from "../../data/projectsList";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function Projects() {
   const [selectedType, setSelectedType] = useState("ALL");
   const filteredProjects = selectedType === "ALL" ? projectsList : projectsList.filter(project => project.type === selectedType);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  })
 
   return (
     <>

@@ -4,11 +4,16 @@ import prizeList from "../../data/prizeList.js";
 import PrizePictureElement from "../components/PrizePictureElement";
 import Banner from "../components/Banner.jsx";
 import "../styles/Prize.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Prize() {
   const [gen, setGen] = useState(2026);
   const filteredPrizes = prizeList.filter((p) => p.year === gen);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
 
   return (
     <>
