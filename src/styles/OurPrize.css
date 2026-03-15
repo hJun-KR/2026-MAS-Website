@@ -1,9 +1,9 @@
 @keyframes spin {
   from {
-    transform: rotate(0deg); /* 0도에서 시작 */
+    transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg); /* 360도까지 회전 */
+    transform: rotate(360deg);
   }
 }
 
@@ -15,307 +15,227 @@
   font-family: "Pretendard-Medium";
   src: url("/fonts/Pretendard/Pretendard-Medium.otf");
 }
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("/fonts/Pretendard/Pretendard-Regular.otf");
+}
+
 #ourPrize {
-  padding-top: 7.3rem;
-  padding-bottom: 7.3rem;
+  padding: 7rem 0;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  width: 100%;
   position: relative;
-  border: 1px solid yellow;
-  overflow: hidden;
+  height: 65rem;
 }
-.ourprize_background {
-  position: absolute;
-  top: 7.31rem;
-  height: 45.5625rem;
-  width: auto;
-  z-index: -1;
-}
-.ourPrize-left {
-  margin-top: 20rem;
+
+.ourPrize-texts {
+  margin-top: 19rem;
+  margin-left: 13rem;
   background: rgba(55, 55, 55, 0);
   z-index: 2;
 }
-.ourPrize-left > h1 {
+
+.ourPrize-texts h1 {
   color: #cbcbcb;
   font-family: "Orbitron-ExtraBold", sans-serif;
   font-size: 5rem;
-  background-color: transparent;
 }
-.ourPrize-left > .prize {
+
+.ourPrize-texts > .prize {
   padding: 0;
   color: #ff6723;
+  font-family: "Orbitron-ExtraBold", sans-serif;
 }
-.ourPrize-left .explanation {
-  margin-top: 1.5rem;
-  background-color: transparent;
-  white-space: pre-line;
+
+.ourPrize-explanation {
+  position: absolute;
+  font-family: "Pretendard-Medium";
   color: #fff;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  white-space: nowrap;
   line-height: 2rem;
 }
-.ourPrize-left .morePrize {
-  display: flex;
-  align-items: center;
-  margin-top: 8.06rem;
-  padding: 0.5rem 0.5rem 0.5rem 1.2rem;
-  background-color: black;
-  border: 2px solid #fff;
-  border-radius: 62.5rem;
-  color: #fff;
-  width: 16.625rem;
-  height: 3.375rem;
-  font-size: 1.375rem;
-  cursor: pointer;
-  font-family: "Pretendard-Medium";
-}
-.ourPrize-left .morePrize:hover {
-  color: #ff6723;
-  border-color: #ff6723;
-  transition: 0.2s ease;
-  .nextButton {
-    transition: 0.2s ease;
-    background-color: #ff6723;
-    color: white;
-  }
-}
-.nextButton {
-  background-color: white;
-  padding: 0.2rem;
-  margin-left: 0.6rem;
-  border-radius: 1.25rem;
-  width: 2rem;
-  height: 2rem;
-  transition: 0.2s ease;
-}
-.ourpPicture {
-  margin-right: 9.5rem;
-  margin-top: 7.38rem;
-}
-.ourprizePicture {
-  width: 60.75rem;
-}
-.full {
-  display: flex;
-  align-items: center;
-}
-.short {
+
+#short-ex {
   display: none;
 }
-.miniTitan1 {
+
+#shortest {
+  display: none;
+}
+
+.morePrize {
   position: absolute;
-  animation: spin 20s linear infinite;
-  transform-origin: 0 23.2rem;
-  width: 1rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #fff;
+  margin-top: 47rem;
+  margin-left: 13rem;
+}
+
+.morePrize #biggest {
+  display: flex;
+  font-family: "Pretendard-Medium", sans-serif;
+  font-size: 1.375rem;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  border-radius: 62.5rem;
+  border: 2px solid #fff;
+  background: rgba(0, 0, 0, 0.2);
+  align-items: center;
+  gap: 0.88rem;
+}
+
+.nextButton {
+  width: 2.125rem;
+  height: 2.125rem;
+  padding: 0.1875rem 0.125rem;
+  border-radius: 1.875rem;
+  background: #fff;
+}
+
+.ourpPicture img {
+  position: absolute;
+  top: 22%;
+  right: 7%;
+  width: 50vw;
   height: auto;
-  animation-delay: -16s;
-  z-index: 3;
 }
-.miniTitan2 {
-  position: absolute;
-  animation: spin 20s linear infinite;
-  transform-origin: 0 23.2rem;
-  width: 1rem;
-  height: auto;
-  animation-delay: -7s;
-  z-index: 3;
+
+.ourpPicture #biggerPic {
+  display: flex;
 }
-.miniTitan3 {
-  position: absolute;
-  animation: spin 20s linear infinite;
-  transform-origin: 0 18.35rem;
-  width: 1rem;
-  height: auto;
-  animation-delay: -8s;
-  z-index: 3;
-}
-.planet_center1 {
-  position: absolute;
-  top: 6.9rem;
-  left: 15.8rem;
-  z-index: 3;
-}
-.planet_center2 {
-  position: absolute;
-  top: 11.66rem;
-  left: 15.8rem;
-  z-index: 3;
+
+.ourpPicture #smallerPic {
+  display: none;
 }
 
 @media (max-width: 1800px) {
-  .ourprize_background {
-    height: 38rem;
+  #ourPrize {
+    padding: 6rem 0;
+    height: 60rem;
   }
-  .ourPrize-left {
+  .ourPrize-texts {
     margin-top: 16rem;
-    margin-left: 5rem;
+    margin-left: 10rem;
   }
-  .ourPrize-left > h1 {
-    font-size: 4rem;
+  .ourPrize-texts h1 {
+    font-size: 4.5rem;
   }
-  .ourPrize-left .explanation {
-    margin-top: 1rem;
+  .ourPrize-explanation {
+    font-size: 1.1rem;
+    margin-top: 0.7rem;
     line-height: 1.5rem;
   }
-  .ourPrize-left .morePrize {
-    margin-top: 9.06rem;
-    padding: 0.3rem 0.3rem 0.3rem 1.1rem;
-    width: 14.5rem;
-    height: 3rem;
-    font-size: 1.2rem;
+  .morePrize {
+    margin-top: 41rem;
+    margin-left: 11rem;
+  }
+  .morePrize #biggest {
+    font-size: 1.1rem;
+    padding: 0.3rem 0.3rem 0.3rem 0.8rem;
+    border-radius: 62.5rem;
+    gap: 0.7rem;
   }
   .nextButton {
-    padding: 0.1rem;
-    margin-left: 0.6rem;
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-  .ourpPicture {
-    margin-right: 6rem;
-  }
-  .ourprizePicture {
-    width: 50vw;
-  }
-  .miniTitan1 {
-    transform-origin: 0 19.45rem;
-    width: 0.9rem;
-  }
-  .miniTitan2 {
-    transform-origin: 0 19.45rem;
-    width: 0.9rem;
-  }
-  .miniTitan3 {
-    transform-origin: 0 15.3rem;
-    width: 1rem;
-  }
-  .planet_center1 {
-    top: 6.8rem;
-    left: 13.1rem;
-  }
-  .planet_center2 {
-    top: 11rem;
-    left: 13.2rem;
+    width: 1.7rem;
+    height: 1.7rem;
+    padding: 0.18rem 0.1rem;
+    border-radius: 1.8rem;
   }
 }
 
 @media (max-width: 1024px) {
   #ourPrize {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding: 6rem 0;
+    height: 40rem;
   }
-  .ourprize_background {
-    height: 28rem;
+  .ourPrize-texts {
+    margin-top: 10rem;
+    margin-left: 6rem;
   }
-  .ourPrize-left {
-    margin-top: 14rem;
-    margin-left: 4rem;
+  .ourPrize-texts h1 {
+    font-size: 3.2rem;
   }
-  .ourPrize-left > h1 {
-    font-size: 3rem;
+  .ourPrize-explanation {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    line-height: 1rem;
   }
-  .ourPrize-left .explanation {
-    font-size: 0.85rem;
-    line-height: 1.3rem;
+  .morePrize {
+    margin-top: 28rem;
+    margin-left: 6rem;
   }
-  .ourPrize-left .morePrize {
-    display: flex;
-    align-items: center;
-    margin-top: 6rem;
-    padding: 0.2rem 0.2rem 0.2rem 1rem;
-    width: 12.5rem;
-    height: 2.6rem;
-    font-size: 1rem;
+  .morePrize #biggest {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.4rem 0.3rem 0.6rem;
+    border-radius: 62.5rem;
+    gap: 0.4rem;
   }
   .nextButton {
-    padding: 0.07rem;
-    margin-left: 0.6rem;
-    width: 1.3rem;
-    height: 1.3rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1.8rem;
   }
-  .ourpPicture {
-    margin-right: 1.25rem;
-  }
-  .miniTitan1 {
-    transform-origin: 0 14.35rem;
-    width: 0.8rem;
-  }
-  .miniTitan2 {
-    transform-origin: 0 14.35rem;
-    width: 0.8rem;
-  }
-  .miniTitan3 {
-    transform-origin: 0 11.3rem;
-    width: 0.8rem;
-  }
-  .planet_center1 {
-    top: 6.9rem;
-    left: 9.7rem;
-  }
-  .planet_center2 {
-    top: 9.935rem;
-    left: 9.65rem;
-  }
-}
-
-@media (max-width: 768px) {
 }
 
 @media (max-width: 430px) {
   #ourPrize {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding: 4rem 0;
+    height: 20rem;
   }
-  .ourprize_background {
-    height: 15.25rem;
+  .ourPrize-texts {
+    margin-top: 18%;
+    margin-left: 7%;
   }
-  .ourPrize-left {
-    margin-top: 8.5rem;
-    margin-left: 2rem;
+  .ourPrize-texts h1 {
+    font-size: 1.25rem;
   }
-  .ourPrize-left > h1 {
-    font-size: 1.3rem;
-  }
-  .ourPrize-left .explanation {
-    margin-top: 0.5rem;
-    line-height: 1rem;
-    font-size: 0.75rem;
-  }
-  .ourPrize-left .morePrize {
-    border: none;
-    background: none;
-    margin-top: 1rem;
-    font-size: 0.9rem;
-  }
-  .full {
+
+  .morePrize #biggest {
     display: none;
   }
-  .short {
+
+  .morePrize #shortest {
     display: flex;
-    justify-content: center;
-    top: -30rem;
   }
-  .short img {
-    margin-left: 1rem;
+
+  .ourPrize-explanation #full-ex {
+    display: none;
   }
-  .miniTitan1 {
-    transform-origin: 0 14.35rem;
-    width: 0.8rem;
+  .ourPrize-explanation #short-ex {
+    display: flex;
   }
-  .miniTitan2 {
-    transform-origin: 0 14.35rem;
-    width: 0.8rem;
+  .ourPrize-explanation {
+    font-family: "Pretendard-Regular", sans-serif;
+    font-size: 0.75rem;
+    line-height: normal;
   }
-  .miniTitan3 {
-    transform-origin: 0 11.3rem;
-    width: 0.8rem;
+
+  .morePrize {
+    margin-top: 1rem;
+    right: 2rem;
   }
-  .planet_center1 {
-    top: 6.9rem;
-    left: 9.7rem;
+
+  .nextButton {
+    height: 1.3rem;
+    padding: 0;
+    margin-left: 0.5rem;
+    background: none;
   }
-  .planet_center2 {
-    top: 9.935rem;
-    left: 9.65rem;
+
+  .ourpPicture img {
+    top: 35%;
+    right: 7%;
+  }
+
+  .ourpPicture #biggerPic {
+    display: none;
+  }
+
+  .ourpPicture #smallerPic {
+    display: flex;
+    width: 45%;
   }
 }

@@ -31,8 +31,14 @@ function Members() {
         </div>
 
         <div className="generation_buttons">
-          {[4, 5, 6].map(g => (
-            <button key={g} className={`yearBtn ${gen === g ? "selected" : "notSelect"}`} onClick={() => setGen(g)} >{g}기</button>
+          {[4, 5, 6].map((g) => (
+            <button
+              key={g}
+              className={`yearBtn ${gen === g ? "selected" : "notSelect"}`}
+              onClick={() => setGen(g)}
+            >
+              {g}기
+            </button>
           ))}
         </div>
 

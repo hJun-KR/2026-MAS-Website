@@ -7,88 +7,87 @@
   src: url("../fonts/Pretendard/Pretendard-Medium.otf");
 }
 
-.bannerAll{
+.bannerAll {
   width: 100%;
   height: 100%;
   position: relative;
 }
 
-.bannerBg-pc{
+.bannerBg-pc {
   width: 100%;
   height: 100%;
 }
 
-.bannerBg-mobile{
+.bannerBg-mobile {
   display: none;
 }
 
-.banner-texts{
+.banner-texts {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  padding: 7rem 44rem;
   white-space: pre;
 }
 
-.bannerTitle{
+.bannerTitle {
   font-family: "Orbitron-ExtraBold";
   font-size: 5rem;
   color: #fff;
   margin-bottom: 1.5rem;
 }
 
-.bannerExplanation{
+.bannerExplanation {
   font-family: "Pretendard-Medium";
   font-size: 1.357rem;
   color: #c3c3c3;
 }
 
 @media (max-width: 1800px) {
-  .bannerTitle{
+  .bannerTitle {
     font-size: 4rem;
     margin-bottom: 1.2rem;
   }
-  .bannerExplanation{
+  .bannerExplanation {
     font-size: 1.2rem;
   }
 }
 
 @media (max-width: 1024px) {
-  .bannerTitle{
+  .bannerTitle {
     font-size: 3rem;
     margin-bottom: 0.8rem;
   }
-  .bannerExplanation{
+  .bannerExplanation {
     font-size: 1rem;
   }
 }
 
 @media (max-width: 768px) {
-  .bannerTitle{
+  .bannerTitle {
     font-size: 2.2rem;
     margin-bottom: 0.5rem;
   }
-  .bannerExplanation{
+  .bannerExplanation {
     font-size: 0.9rem;
   }
 }
 
 @media (max-width: 430px) {
-  .bannerBg-pc{
+  .bannerBg-pc {
     display: none;
   }
-  .bannerBg-mobile{
+  .bannerBg-mobile {
     display: flex;
     width: 100%;
     height: 100%;
   }
-  .bannerTitle{
+  .bannerTitle {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
   }
-  .bannerExplanation{
+  .bannerExplanation {
     font-size: 0.75rem;
   }
 }

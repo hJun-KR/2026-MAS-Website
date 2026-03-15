@@ -130,7 +130,7 @@
   margin-bottom: 6rem;
 }
 
-@media (max-width:1800px) {
+@media (max-width: 1800px) {
   .members {
     padding-top: 6rem;
   }
@@ -231,10 +231,10 @@
     gap: 0.8rem;
     margin-bottom: 3rem;
   }
-  .member_title{
+  .member_title {
     font-size: 2.5rem;
   }
-  .member_explanation{
+  .member_explanation {
     font-size: 0.8rem;
     margin-top: 1.3rem;
   }
@@ -244,7 +244,7 @@
   .members {
     padding-top: 3rem;
   }
-  .generation_buttons{
+  .generation_buttons {
     gap: 4rem;
   }
   .selected,
@@ -272,10 +272,10 @@
     gap: 0.8rem;
     margin-bottom: 3rem;
   }
-  .member_title{
+  .member_title {
     font-size: 2.5rem;
   }
-  .member_explanation{
+  .member_explanation {
     font-size: 0.8rem;
     margin-top: 1.3rem;
   }

@@ -12,16 +12,39 @@ function Hero() {
   const sat2BackRefs = useRef([]);
   const sat2FrontRefs = useRef([]);
 
+  const orbit1Ref = useRef(null);
+  const orbit2Ref = useRef(null);
+
   useEffect(() => {
     let angle = 0;
+
+    const getOrbitRadii = () => {
+      const el1 = orbit1Ref.current;
+      const el2 = orbit2Ref.current;
+      if (!el1 || !el2) {
+        return { rx1: 399.16, ry1: 106.31, rx2: 313.43, ry2: 100.82 };
+      }
+
+      const style1 = window.getComputedStyle(el1);
+      const style2 = window.getComputedStyle(el2);
+
+      return {
+        rx1: parseFloat(style1.width) / 2,
+        ry1: parseFloat(style1.height) / 2,
+        rx2: parseFloat(style2.width) / 2,
+        ry2: parseFloat(style2.height) / 2,
+      };
+    };
+
     const animate = () => {
       angle += 0.015;
+      const { rx1, ry1, rx2, ry2 } = getOrbitRadii();
 
       for (let i = 0; i < orbit1Count; i++) {
         const spacing = (Math.PI * 2) / orbit1Count;
         const currentAngle = angle + i * spacing;
-        const x = 399 * Math.cos(currentAngle);
-        const y = 106 * Math.sin(currentAngle);
+        const x = rx1 * Math.cos(currentAngle);
+        const y = ry1 * Math.sin(currentAngle);
         const transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`;
 
         const backEl = sat1BackRefs.current[i];
@@ -42,8 +65,8 @@ function Hero() {
       for (let i = 0; i < orbit2Count; i++) {
         const spacing = (Math.PI * 2) / orbit2Count;
         const currentAngle = -angle * 1.2 + i * spacing;
-        const x = 313 * Math.cos(currentAngle);
-        const y = 100 * Math.sin(currentAngle);
+        const x = rx2 * Math.cos(currentAngle);
+        const y = ry2 * Math.sin(currentAngle);
         const transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`;
 
         const backEl = sat2BackRefs.current[i];
@@ -98,26 +121,32 @@ function Hero() {
         </div>
 
         <div className="planet-container">
-          <div className="orbit-1-size orbit-1-border orbit-line-container layer-back" />
-          <div className="orbit-2-size orbit-2-border orbit-line-container layer-back" />
-
-          <div className="orbit-1-size orbit-sat-container layer-back">
-            {createSats(orbit1Count, sat1BackRefs)}
+          <div className="orbit-1-size orbit-line-container layer-back">
+            <div className="orbit-1-border" style={{width:"100%",height:"100%",borderRadius:"50%",position:"absolute"}} />
+            <div className="orbit-sat-container">
+              {createSats(orbit1Count, sat1BackRefs)}
+            </div>
           </div>
-          <div className="orbit-2-size orbit-sat-container layer-back">
-            {createSats(orbit2Count, sat2BackRefs)}
+          <div className="orbit-2-size orbit-line-container layer-back">
+            <div className="orbit-2-border" style={{width:"100%",height:"100%",borderRadius:"50%",position:"absolute"}} />
+            <div className="orbit-sat-container">
+              {createSats(orbit2Count, sat2BackRefs)}
+            </div>
           </div>
 
           <div className="main-planet"></div>
 
-          <div className="orbit-1-size orbit-1-border orbit-line-container layer-front" />
-          <div className="orbit-2-size orbit-2-border orbit-line-container layer-front" />
-
-          <div className="orbit-1-size orbit-sat-container layer-front">
-            {createSats(orbit1Count, sat1FrontRefs)}
+          <div className="orbit-1-size orbit-line-container layer-front" ref={orbit1Ref}>
+            <div className="orbit-1-border" style={{width:"100%",height:"100%",borderRadius:"50%",position:"absolute"}} />
+            <div className="orbit-sat-container">
+              {createSats(orbit1Count, sat1FrontRefs)}
+            </div>
           </div>
-          <div className="orbit-2-size orbit-sat-container layer-front">
-            {createSats(orbit2Count, sat2FrontRefs)}
+          <div className="orbit-2-size orbit-line-container layer-front" ref={orbit2Ref}>
+            <div className="orbit-2-border" style={{width:"100%",height:"100%",borderRadius:"50%",position:"absolute"}} />
+            <div className="orbit-sat-container">
+              {createSats(orbit2Count, sat2FrontRefs)}
+            </div>
           </div>
         </div>
       </div>

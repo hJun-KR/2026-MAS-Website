@@ -63,6 +63,7 @@
 .coreValueCard > p {
   font-family: "Pretendard-Medium", sans-serif;
   font-size: 1rem;
+  line-height: 1.7;
 }
 
 @media (max-width: 1800px) {
@@ -85,6 +86,7 @@
   }
   .coreValueCard > p {
     font-size: 1rem;
+    line-height: 1.7;
   }
 }
 
@@ -94,54 +96,73 @@
     padding: 1.2rem;
   }
   .coreValueCard > .background {
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: 0.5rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
   }
   .coreValueCard > .background > img {
-    width: 2.5rem;
+    width: 2.2rem;
   }
   .coreValueCard > h2 {
     font-family: "Orbitron-SemiBold", sans-serif;
     font-size: 1rem;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.5rem;
   }
   .coreValueCard > p {
     font-family: "Pretendard-Regular";
-    font-size: 0.8rem;
+    font-size: 0.875rem;
+    line-height: 1.65;
     white-space: normal;
   }
 }
 
 @media (max-width: 768px) {
+  .coreValueCard {
+    border-radius: 0.75rem;
+    padding: 1rem;
+  }
+  .coreValueCard > .background {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.4rem;
+    margin-bottom: 0.75rem;
+  }
+  .coreValueCard > .background > img {
+    width: 1.9rem;
+  }
   .coreValueCard > h2 {
-    font-size: 1rem;
-    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.35rem;
   }
   .coreValueCard > p {
-    font-size: 0.8rem;
+    font-size: 0.825rem;
+    line-height: 1.6;
+    white-space: normal;
   }
 }
 
 @media (max-width: 430px) {
   .coreValueCard {
-    border-radius: 0.9rem;
-    padding: 1rem;
+    border-radius: 0.75rem;
+    padding: 0.875rem;
   }
   .coreValueCard > .background {
-    width: 1.9rem;
-    height: 1.9rem;
-    border-radius: 0.25rem;
-    margin-bottom: 0.63rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 0.3rem;
+    margin-bottom: 0.6rem;
   }
   .coreValueCard > .background > img {
-    width: 1.5rem;
+    width: 1.4rem;
   }
   .coreValueCard > h2 {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
   }
   .coreValueCard > p {
-    font-size: 0.65rem;
+    font-size: 0.75rem;
+    line-height: 1.55;
+    white-space: normal;
   }
 }

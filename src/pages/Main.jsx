@@ -26,7 +26,7 @@ function Main() {
       <Header />
       <Hero />
       <CoreValues />
-      <OurPrize />
+      <OurPrize />/
       <MainMembers />
       <MainProjects />
       <QnA />

@@ -1,10 +1,10 @@
 @font-face {
   font-family: "Pretendard-Medium";
-  src: url("../../fonts/Pretendard/Pretendard-Medium.otf");
+  src: url("/fonts/Pretendard/Pretendard-Medium.otf");
 }
 @font-face {
   font-family: "Pretendard-Bold";
-  src: url("../../fonts/Pretendard/Pretendard-Bold.otf");
+  src: url("/fonts/Pretendard/Pretendard-Bold.otf");
 }
 
 .member_feaButton {
