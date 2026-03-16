@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import "../styles/Hero.css";
-import Apply from "../components/Apply";
 import Typewriter from "typewriter-effect";
 
 function Hero() {
@@ -117,7 +116,6 @@ function Hero() {
               }}
             />
           </div>
-          <Apply />
         </div>
 
         <div className="planet-container">

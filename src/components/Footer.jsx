@@ -8,11 +8,7 @@ const navItems = [
   { text: "MEMBERS", path: "#members" },
   { text: "PROJECTS", path: "#projects" },
   { text: "Q&A", path: "#qna" },
-  {
-    text: "JOIN THE CREW",
-    path: "https://forms.gle/CzsdLkFV5vc36nGN6",
-    external: true,
-  },
+  { text: "JOIN THE CREW" },
 ];
 
 function Footer() {

@@ -26,7 +26,7 @@ function Members() {
             mobileImg="/members_bg.svg"
             h1Title="MEMBERS"
             pExplanation1="MAS를 빛내고 지금까지"
-            pExplanation2="M이끌어 온 부원들 입니다."
+            pExplanation2="이끌어 온 부원들 입니다."
           />
         </div>
 
@@ -68,9 +68,6 @@ function Members() {
                   feaTitle="Growth"
                   feaExplanation="각자의 능력을 나누며 어제보다 더 성장합니다."
                 />
-              </div>
-              <div className="member_joinButton">
-                <button className="member_join">지원하기</button>
               </div>
             </div>
           </div>
