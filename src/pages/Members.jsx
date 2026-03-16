@@ -26,7 +26,7 @@ function Members() {
             mobileImg="/members_bg.svg"
             h1Title="MEMBERS"
             pExplanation1="MAS를 빛내고 지금까지"
-            pExplanation2="M이끌어 온 부원들 입니다."
+            pExplanation2="이끌어 온 부원들 입니다."
           />
         </div>
 
