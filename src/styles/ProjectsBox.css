@@ -1,10 +1,10 @@
 @font-face {
   font-family: "Pretendard-bold";
-  src: url("../fonts/Pretendard/Pretendard-bold.otf");
+  src: url("/fonts/Pretendard/Pretendard-bold.otf");
 }
 @font-face {
   font-family: "Pretendard-Medium";
-  src: url("../fonts/Pretendard/Pretendard-Medium.otf");
+  src: url("/fonts/Pretendard/Pretendard-Medium.otf");
 }
 .project-box {
   width: 34.37rem;

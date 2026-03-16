@@ -1,14 +1,14 @@
 @font-face {
     font-family: "Orbitron-ExtraBold";
-    src: url("../fonts/Orbitron/Orbitron-ExtraBold.ttf");
+    src: url("/fonts/Orbitron/Orbitron-ExtraBold.ttf");
 }
 @font-face {
     font-family: "Pretendard-Medium";
-    src: url("../fonts/Pretendard/Pretendard-Medium.otf");
+    src: url("/fonts/Pretendard/Pretendard-Medium.otf");
 }
 @font-face {
     font-family: "Pretendard-bold";
-    src: url("../fonts/Pretendard/Pretendard-bold.otf");
+    src: url("/fonts/Pretendard/Pretendard-bold.otf");
 }
 
 .banner {
