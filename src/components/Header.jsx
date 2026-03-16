@@ -2,7 +2,6 @@ import { useNavigate } from "react-router-dom";
 import "../styles/Header.css";
 import NavElements from "./NavElements";
 import SocialLinks from "./SocialLinks";
-import Apply from "./Apply";
 import { useState } from "react";
 
 const navItems = [
@@ -45,7 +44,6 @@ function Header() {
         <div className="header_socialLinks">
           <SocialLinks />
         </div>
-        <Apply />
 
         {/* 모바일 */}
         <button className="hambuger" onClick={() => setMenuOpen(!menuOpen)}>

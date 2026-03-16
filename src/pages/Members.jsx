@@ -69,9 +69,6 @@ function Members() {
                   feaExplanation="각자의 능력을 나누며 어제보다 더 성장합니다."
                 />
               </div>
-              <div className="member_joinButton">
-                <button className="member_join">지원하기</button>
-              </div>
             </div>
           </div>
         ) : (
