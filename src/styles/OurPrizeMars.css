@@ -1,41 +1,11 @@
-@keyframes spin {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(360);
-  }
-}
-
 .planet_wrapper {
   position: absolute;
   width: 43%;
 }
 
-.titan {
-  z-index: 3;
-}
-
 @media (max-width: 1800px) {
   .mars {
     width: 80%;
-  }
-  .planet_center1 {
-    position: absolute;
-    top: 5.3rem;
-    left: 12.563rem;
-    z-index: 3;
-  }
-  .titan1 {
-    position: absolute;
-    /* animation: spin 20s linear infinite;
-    transform-origin: 0 18.6rem; */
-  }
-  .titan2 {
-  }
-  .planet_center2 {
-  }
-  .titan3 {
   }
 }
 

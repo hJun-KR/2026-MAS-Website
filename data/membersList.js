@@ -33,7 +33,7 @@ const membersList = [
     major: 1,
     role: "",
     tag1: "Full-Stack Developer",
-    tag2: "MAS 츤데레",
+    tag2: "츤데레",
   },
   {
     image: "/4th/Geon.svg",
@@ -69,7 +69,7 @@ const membersList = [
     major: 1,
     role: "",
     tag1: "Full-Stack Developer",
-    tag2: "MAS 요정",
+    tag2: "뇌섹남",
   },
   {
     image: "/5th/Sieun.svg",
@@ -78,7 +78,7 @@ const membersList = [
     major: 2,
     role: "",
     tag1: "Graphic Designer",
-    tag2: "MAS 쌩쥐",
+    tag2: "그래픽 천재",
   },
   {
     image: "/5th/Junseo.svg",
@@ -87,7 +87,7 @@ const membersList = [
     major: 1,
     role: "",
     tag1: "Back-End Developer",
-    tag2: "",
+    tag2: "JAVA의 신",
   },
   {
     image: "/5th/Jungwon.svg",
