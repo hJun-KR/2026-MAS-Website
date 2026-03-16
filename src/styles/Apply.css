@@ -8,17 +8,30 @@
   align-items: center;
   justify-content: center;
   font-family: "Pretendard-Medium", sans-serif;
-  font-size: 19px;
+  font-size: 1.5rem;
   color: #fff;
   text-decoration: none;
-  width: 125px;
-  height: 52px;
-  border-radius: 1000px;
+  white-space: nowrap;
+  padding: 0.97rem 2.09rem;
+  border-radius: 50px;
   border: 2px solid #fff;
   cursor: pointer;
   background-color: #000;
   transition: 0.2s ease;
 }
+
 .apply:hover {
   background-color: #ff6723;
+}
+@media (max-width: 1800px) {
+  .apply {
+    font-size: 1.2rem;
+    padding: 0.85rem 1.8rem;
+  }
+}
+@media (max-width: 1024px) {
+  .apply {
+    font-size: 1rem;
+    padding: 0.7rem 1.4rem;
+  }
 }

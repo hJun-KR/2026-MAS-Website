@@ -1,6 +1,7 @@
 import "../styles/CoreValues.css";
 import CoreValueCard from "../components/CoreValueCard";
 import coreValuesList from "../../data/coreValuesList";
+import Wave from "../components/Wave.jsx";
 
 function CoreValues() {
   return (
@@ -19,11 +20,20 @@ function CoreValues() {
           />
         ))}
       </div>
-      <div className="wave-space"></div>
-      {/* <div className="wave"></div> */}
-      {/* <div className="hexagon"></div> */}
-      {/* <div className="octagon"></div>; */}
-
+      <div className="wave-wrapper">
+        <svg width="0" height="0">
+          <defs>
+            <linearGradient id="waveGradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="rgba(0,0,0,0.35)" />
+              <stop offset="100%" stopColor="rgba(255,110,0,0.35)" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <div className="wave-track">
+          <Wave />
+          <Wave />
+        </div>
+      </div>
     </section>
   );
 }

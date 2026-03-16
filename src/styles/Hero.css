@@ -2,52 +2,283 @@
   font-family: "Orbitron-Black";
   src: url("/fonts/Orbitron/Orbitron-Black.ttf");
 }
+@font-face {
+  font-family: "Orbitron-Bold";
+  src: url("/fonts/Orbitron/Orbitron-Bold.ttf");
+}
+
 #hero {
   background-color: #000;
-  min-height: 100vh;
-  padding: 250px 0 100px;
+  padding: 10rem 13.12rem;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 35px;
+  justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
+
 .heroRow {
   display: flex;
   align-items: center;
-  gap: 220px;
-  padding-left: 10%;
 }
+
+.left {
+  margin-left: 2rem;
+}
+
 .texts {
   font-family: "Orbitron-Black", sans-serif;
-  font-size: 80px;
+  font-size: 6.25rem;
   color: #cbcbcb;
-  width: 390px;
-  height: 300px;
+  width: 50rem;
+  height: 24.4375rem;
 }
+
 .texts .orange {
   color: #ff6723;
 }
-#hero .apply {
-  margin-top: 30px;
+
+.left .apply {
+  margin-top: 2rem;
+  width: 9.375rem;
+  padding: 1.5rem;
+  gap: 0.625rem;
+  border-radius: 62.5rem;
+  font-size: 1.5rem;
 }
-.planet {
+
+.planet-container {
   position: relative;
-  width: 660px;
-  height: 323px;
+  width: 51.62344rem;
+  height: 34.06256rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.planet img {
+
+.main-planet {
+  width: 25.27869rem;
+  height: 25.27869rem;
+  border-radius: 50%;
+  background:
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
+    linear-gradient(
+      295deg,
+      rgba(130, 82, 82, 0) 9.45%,
+      rgba(255, 21, 0, 0.34) 102.74%
+    ),
+    radial-gradient(
+      66.75% 66.75% at 47.49% 31.8%,
+      #ff5900 0%,
+      #90390a 57.77%,
+      #1a0a00 100%
+    );
+  position: absolute;
+  z-index: 100;
+}
+
+.orbit-1-size {
+  width: 49.89525rem;
+  height: 13.28825rem;
+  transform: rotate(13.732deg);
+  position: absolute;
+  pointer-events: none;
+}
+
+.orbit-2-size {
+  width: 39.17888rem;
+  height: 12.60238rem;
+  transform: rotate(-38.027deg);
+  position: absolute;
+  pointer-events: none;
+}
+
+.orbit-1-border {
+  border: 1px solid rgba(203, 203, 203, 0.2);
+  border-radius: 50%;
+}
+
+.orbit-2-border {
+  border: 2px solid rgba(159, 52, 9, 0.8);
+  border-radius: 50%;
+}
+
+.orbit-line-container.layer-back {
+  clip-path: inset(0 0 50% 0);
+}
+
+.orbit-line-container.layer-front {
+  clip-path: inset(50% 0 0 0);
+}
+
+.orbit-sat-container {
   position: absolute;
   top: 50%;
-  left: 40%;
+  left: 50%;
   transform: translate(-50%, -50%);
+  pointer-events: none;
 }
-.mars {
-  width: 290px;
+
+.layer-back {
+  z-index: 50;
 }
-.wR {
-  width: 600px;
+
+.layer-front {
+  z-index: 150;
 }
-.oR {
-  width: 380px;
+
+.satellite-js {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.69rem;
+  height: 0.69rem;
+  background-color: #fff;
+  border-radius: 50%;
+  filter: blur(1px);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+  will-change: transform, opacity;
+}
+
+@media (max-width: 1800px) {
+  #hero {
+    padding: 8rem 7rem;
+  }
+  .heroRow {
+    gap: 0rem;
+  }
+  .texts {
+    font-size: 5.5rem;
+    width: 30rem;
+    height: 20.5rem;
+  }
+  .left .apply {
+    width: 8.2rem;
+    padding: 1rem;
+    border-radius: 62.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  #hero {
+    padding: 7rem 5rem;
+  }
+  .texts {
+    font-size: 4rem;
+    width: 22rem;
+    height: 14rem;
+  }
+  .left .apply {
+    width: 7rem;
+    padding: 0.7rem;
+    border-radius: 25rem;
+    font-size: 1rem;
+  }
+  .planet-container {
+    width: 33.0390016rem;
+    height: 21.8000384rem;
+  }
+  .main-planet {
+    width: 16.17836rem;
+    height: 16.17836rem;
+  }
+  .orbit-1-size {
+    width: 31.93296rem;
+    height: 8.50448rem;
+  }
+  .orbit-2-size {
+    width: 25.0744832rem;
+    height: 8.0655232rem;
+  }
+  .satellite-js {
+    width: 0.4416rem;
+    height: 0.4416rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero {
+    padding: 7rem 1rem 0;
+  }
+  .heroRow {
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+    justify-content: center;
+  }
+  .texts {
+    font-family: "Orbitron-Bold";
+    font-size: 3rem;
+    width: 15rem;
+    height: 10.5rem;
+  }
+  .left .apply {
+    width: 6rem;
+    padding: 0.62rem;
+    border-radius: 6.25rem;
+    font-size: 0.9rem;
+  }
+  .planet-container {
+    width: 23.7375rem;
+    height: 15.75rem;
+  }
+  .main-planet {
+    width: 11.62365089446286rem;
+    height: 11.62365089446286rem;
+  }
+  .orbit-1-size {
+    width: 22.94284334548413rem;
+    height: 6.110205642533702rem;
+  }
+  .orbit-2-size {
+    width: 18.01524005374302rem;
+    height: 5.794828768675623rem;
+  }
+  .satellite-js {
+    width: 0.3172759312436367rem;
+    height: 0.3172759312436367rem;
+  }
+}
+
+@media (max-width: 430px) {
+  #hero {
+    padding: 6rem 0.5rem 0;
+  }
+  .heroRow {
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+    justify-content: center;
+  }
+  .texts {
+    font-size: 2.125rem;
+    width: 10rem;
+    height: 6.5rem;
+  }
+  .left .apply {
+    width: 5.75rem;
+    padding: 0.62rem;
+    border-radius: 6.25rem;
+    font-size: 0.875rem;
+  }
+  .planet-container {
+    width: 13.1875rem;
+    height: 8.75rem;
+  }
+  .main-planet {
+    width: 6.457583830257146rem;
+    height: 6.457583830257146rem;
+  }
+  .orbit-1-size {
+    width: 12.74602408082452rem;
+    height: 3.394558690296501rem;
+  }
+  .orbit-2-size {
+    width: 10.0084666965239rem;
+    height: 3.219349315930902rem;
+  }
+  .satellite-js {
+    width: 0.1762644062464648rem;
+    height: 0.1762644062464648rem;
+  }
 }

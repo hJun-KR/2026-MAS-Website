@@ -1,0 +1,16 @@
+.planet_wrapper {
+  position: absolute;
+  width: 43%;
+}
+
+@media (max-width: 1800px) {
+  .mars {
+    width: 80%;
+  }
+}
+
+@media (max-width: 430px) {
+  .mars {
+    width: 100%;
+  }
+}

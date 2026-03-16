@@ -12,40 +12,44 @@
 }
 
 .banner {
-    height: 320px;
-    /* 배경 이미지 설정 */
-    background-image: url("/titleBackground.svg");
-
-    /* 이미지 반복 x */
-    background-repeat: no-repeat;
-    /* 이미지 정중앙 */
-    background-position: center;
-    /* 빈틈없이 채우기 */
-    background-size: cover; 
-    
-    
-    /* 텍스트 정렬 */
-    text-align: center;
+    width: 100%;
+    height: 22vw;
+    min-height: clamp(120px, 15vw, 250px);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.2) 1.5px, transparent 0), url("/titleBackground.svg");
+    background-size: 20px 20px, cover; 
+    background-repeat: repeat, no-repeat;
+    background-position: center, center;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    text-align: center;
 }
 .title {
     background: none;
 }
 /* PROJECTS */
 .title h1 {
-    background: none;
-    font-family: "Orbitron-ExtraBold",sans-serif;
-    font-size: 64px;
+    font-family: "Orbitron-ExtraBold", sans-serif;
+    font-size: clamp(32px, 4.5vw, 64px); 
     color: white;
-    margin-bottom: 26px;
+    margin-bottom: 1.5vw;
 }
 /* 부제목 */
 .title p {
-    background: none;
-    font-family: "Pretendard-Medium",sans-serif;
-    font-size: 17px;
+    font-family: "Pretendard-Medium", sans-serif;
+    font-size: clamp(13px, 1.2vw, 17px);
     color: #C3C3C3;
+    line-height: 1.5;
+}
+@media (max-width: 1023px) {
+    .banner {
+        height: 25vw; 
+    }
+}
+
+@media (max-width: 767px) {
+    .banner {
+        height: 35vw; 
+        background-size: 15px 15px, cover; 
+    }
 }

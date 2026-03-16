@@ -1,15 +1,20 @@
-import { Link } from "react-router-dom";
-import "../styles/Banner.css"
+import "../styles/Banner.css";
 
-function Banner({ bannerIMG, h1Title, pExplanation1, pExplanation2 }) {
-    const bannerStyle = {
-    backgroundImage: `url(${bannerIMG})`
-  };
+function Banner({ pcImg, mobileImg, h1Title, pExplanation1, pExplanation2 }) {
   return (
-    <div className="bannerAll" style={bannerStyle}>
-        <h1 className="bannerTitle" style={{ color: "#fff" }}>{h1Title}</h1>
-        <p className="bannerExplanation" style={{ color: "#C3C3C3" }}>{pExplanation1}<br/>{pExplanation2}</p>
-      
+    <div className="bannerAll">
+      <img src={pcImg} alt="" className="bannerBg-pc" />
+      <img src={mobileImg} alt="" className="bannerBg-mobile" />
+      <div className="banner-texts">
+        <h1 className="bannerTitle">
+          {h1Title}
+        </h1>
+        <p className="bannerExplanation">
+          {pExplanation1}
+          <br />
+          {pExplanation2}
+        </p>
+      </div>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import '../styles/ProjectsBanner.css';
+import '../styles/PrizesBanner.css';
 function ProjectsBanner() {
   return (
     <>

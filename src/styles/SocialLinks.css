@@ -2,9 +2,20 @@
   align-items: center;
   list-style: none;
   display: flex;
-  gap: 26px;
+  gap: 1.88rem;
 }
-.nav_links > li > img {
-  height: 24px;
+
+.nav_links > li > a > img {
+  height: 1.75rem;
   cursor: pointer;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .nav_links {
+    gap: 1.2rem;
+  }
+  .nav_links > li > a > img {
+    height: 1.3rem;
+  }
 }

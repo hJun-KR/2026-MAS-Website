@@ -9,9 +9,9 @@
 
 .weAreMAS {
   width: 100%;
-  height: 820px;
+  height: auto;
   background-color: black;
-  margin-top: 200px;
+  padding-top: 5rem;
 }
 
 .weAreMAS-texts {
@@ -20,22 +20,22 @@
 
 .weAreMAS-texts h1 {
   font-family: "Orbitron-ExtraBold";
-  font-size: 76px;
+  font-size: 4.5rem;
   color: #ff6723;
 }
 
 .weAreMAS-texts p {
   font-family: "Pretendard-Medium";
-  font-size: 20px;
+  font-size: 1.2rem;
   color: #fff;
 }
 
 .curve-mask {
   position: absolute;
   z-index: 2;
-  margin: 30px auto;
+  margin: 2rem auto;
   width: 100%;
-  height: 150px;
+  height: 10rem;
   background-color: black;
   border-radius: 50%;
 }
@@ -53,21 +53,20 @@
 .weAreMAS .slider {
   overflow: hidden;
   width: 100%;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   position: relative;
 }
 
 .slider-track {
   display: flex;
-  gap: 27px;
+  gap: 2rem;
   animation: scroll 20s linear infinite;
 }
 
 .slide-item {
-  flex: 0 0 304px;
-  height: 384px;
-  border-radius: 12px;
+  flex: 0 0 20rem;
+  height: 24.8rem;
   overflow: hidden;
 }
 
@@ -83,5 +82,82 @@
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 1500px) {
+  .weAreMAS-texts h1 {
+    font-size: 3.8rem;
+  }
+  .weAreMAS-texts p {
+    font-size: 1.1rem;
+  }
+  .slide-item {
+    flex: 0 0 17rem;
+    height: 21rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .weAreMAS {
+    padding-top: 4rem;
+  }
+  .weAreMAS-texts h1 {
+    font-size: 3rem;
+  }
+  .weAreMAS-texts p {
+    font-size: 1rem;
+  }
+  .slider-track {
+    gap: 1.5rem;
+  }
+  .slide-item {
+    flex: 0 0 14rem;
+    height: 18rem;
+  }
+  .weAreMAS .slider {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+  .curve-mask {
+    height: 7rem;
+  }
+  .curve-mask.top {
+    transform: translateY(-30%);
+  }
+  .curve-mask.bottom {
+    transform: translateY(30%);
+  }
+}
+
+@media (max-width: 768px) {
+  .weAreMAS {
+    padding-top: 3rem;
+  }
+  .weAreMAS-texts h1 {
+    font-size: 2.2rem;
+  }
+  .weAreMAS-texts p {
+    font-size: 0.9rem;
+  }
+  .slider-track {
+    gap: 1rem;
+  }
+  .slide-item {
+    flex: 0 0 10rem;
+    height: 15rem;
+  }
+  .weAreMAS .slider {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+  .curve-mask {
+    height: 4.5rem;
+  }
+  .curve-mask.top {
+    transform: translateY(-40%);
+  }
+  .curve-mask.bottom {
+    transform: translateY(40%);
   }
 }

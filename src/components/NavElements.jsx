@@ -3,7 +3,6 @@ import "../styles/NavElements.css";
 
 function NavElements({ text, path, external }) {
   const navigate = useNavigate();
-
   const handleClick = (e) => {
     if (external) return;
     e.preventDefault();
@@ -13,7 +12,6 @@ function NavElements({ text, path, external }) {
       navigate(path);
     }
   };
-
   return (
     <li>
       <a

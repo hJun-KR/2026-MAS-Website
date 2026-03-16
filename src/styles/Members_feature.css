@@ -1,53 +1,113 @@
 @font-face {
-    font-family: "Pretendard-Medium";
-    src: url("../../fonts/Pretendard/Pretendard-Medium.otf");
+  font-family: "Pretendard-Medium";
+  src: url("/fonts/Pretendard/Pretendard-Medium.otf");
 }
 @font-face {
-    font-family: "Pretendard-Bold";
-    src: url("../../fonts/Pretendard/Pretendard-Bold.otf");
+  font-family: "Pretendard-Bold";
+  src: url("/fonts/Pretendard/Pretendard-Bold.otf");
 }
 
 .member_feaButton {
-    transition: all 0.5s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 387px;
-    height: 216px;
-    border: #959595 2px solid;
-    border-radius: 8px;
-    background-color: rgba(0, 0, 0, 0.4);
-    color: #ffffff;
+  transition: all 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 24.1rem;
+  height: 13.5rem;
+  border: #959595 0.1rem solid;
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
 }
 
 .member_feaButton:hover {
-    transition: all 0.5s ease;
-    .Member_feaNum, .Member_feaTitle, .Member_feaExplanation {
-        color: #FD802E;
-    }
-    background-color: rgba(35, 61, 76, 0.5);
-    cursor: pointer;
-    box-shadow: 
-        0px -4px 8px rgba(0, 0, 0, 0.3),
-        0px 4px 8px rgba(0, 0, 0, 0.3);
-    border:  rgba(35, 61, 76, 0.5) 2px solid;    
+  transition: all 0.5s ease;
+  background-color: rgba(35, 61, 76, 0.5);
+  cursor: pointer;
+  box-shadow:
+    0px -0.25rem 0.5rem rgba(0, 0, 0, 0.3),
+    0px 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
+  border: rgba(35, 61, 76, 0.5) 0.1rem solid;
+}
+
+.member_feaButton:hover .Member_feaNum,
+.member_feaButton:hover .Member_feaTitle,
+.member_feaButton:hover .Member_feaExplanation {
+  color: #fd802e;
 }
 
 .Member_feaTitle {
-    font-family: "Pretendard-Bold", sans-serif;
-    font-size: 27px;
-    color: #ffffff;
-    margin-top: 35px;
+  font-family: "Pretendard-Bold", sans-serif;
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin-top: 2.1rem;
 }
 
 .Member_feaNum {
-    font-family: "Pretendard-Medium", sans-serif;
-    font-size: 14px;
-    color: #ffffff;
+  font-family: "Pretendard-Medium", sans-serif;
+  font-size: 0.8rem;
+  color: #ffffff;
 }
 
 .Member_feaExplanation {
-    font-family: "Pretendard-Medium", sans-serif;
-    font-size: 14px;
-    color: #A0A0A0;
+  font-family: "Pretendard-Medium", sans-serif;
+  font-size: 0.8rem;
+  color: #a0a0a0;
+}
+@media (max-width: 1024px) {
+  .member_feaButton {
+    width: 16rem;
+    height: 10rem;
+    border: #959595 0.1rem solid;
+    border-radius: 0.4rem;
+  }
+  .member_feaButton:hover {
+    box-shadow:
+      0px -0.25rem 0.5rem rgba(0, 0, 0, 0.3),
+      0px 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
+    border: rgba(35, 61, 76, 0.5) 0.1rem solid;
+  }
+
+  .Member_feaTitle {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-top: 1rem;
+  }
+
+  .Member_feaNum {
+    font-size: 0.6rem;
+  }
+
+  .Member_feaExplanation {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .member_feaButton {
+    width: 13rem;
+    height: 7.5rem;
+    border: #959595 0.1rem solid;
+    border-radius: 0.3rem;
+  }
+  .member_feaButton:hover {
+    box-shadow:
+      0px -0.25rem 0.5rem rgba(0, 0, 0, 0.3),
+      0px 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
+    border: rgba(35, 61, 76, 0.5) 0.1rem solid;
+  }
+
+  .Member_feaTitle {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-top: 0.7rem;
+  }
+
+  .Member_feaNum {
+    font-size: 0.4rem;
+  }
+
+  .Member_feaExplanation {
+    font-size: 0.4rem;
+  }
 }
