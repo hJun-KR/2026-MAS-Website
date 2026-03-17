@@ -54,11 +54,4 @@ export default defineConfig({
       },
     })
   ],
-  server: {
-    host: true,
-    allowedHosts: [
-      'mas-mirim.kr',
-      'www.mas-mirim.kr',
-    ]
-  }
 })
