@@ -4,7 +4,7 @@ import NavElements from "./NavElements";
 
 const navItems = [
   { text: "VISION", path: "#vision" },
-  { text: "PRIZE", path: "#prize" },
+  { text: "PRIZE", path: "#ourPrize" },
   { text: "MEMBERS", path: "#members" },
   { text: "PROJECTS", path: "#projects" },
   { text: "Q&A", path: "#qna" },
