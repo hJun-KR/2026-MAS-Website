@@ -14,6 +14,10 @@
   color: inherit;
 }
 
+#orange {
+  color: #ff6723;
+}
+
 .navElements:hover {
   transition: 0.2s ease;
   color: #ff6723;

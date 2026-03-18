@@ -15,6 +15,7 @@ function NavElements({ text, path, external }) {
   return (
     <li>
       <a
+        id={text === "JOIN THE CREW" ? "orange" : undefined}
         href={path}
         className="navElements"
         onClick={handleClick}
