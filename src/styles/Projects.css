@@ -11,6 +11,7 @@
 
 /* 전체 컨테이너 */
 .project {
+  background-color: #000;
   padding-top: 7rem;
   width: 100%;
   display: flex;
